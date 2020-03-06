@@ -54,10 +54,14 @@ hint:
 
 
 ## Cleaning Up
+
+### Removing null data points
 If you notice, your data has a lot of zeros in it... Importantly, zeros that aren't real measurements. You need to get rid of them somehow. I have chosen to just remove all zero events, because I know that zero doesn't represent a real event.
 
 ```python
 behav_df = behav_df[behav_df.Event!=0]
+#or, if there were null values instead of zero, for example...
+behav_df = behav_df[~behav_df.Event.isna()] #~ is "not"
 ```  
 if you just type in behav_df.Event!=0, you get an array returned that is True/False. And so, another way to think about this confusing dataframe inside a dataframe is:
 
@@ -66,5 +70,14 @@ rows_i_care_about = behav_df.Event!=0 #rows where event doesn't equal zero
 behav_df = behav_df[rows_i_care_about] #resetting dataframe to only include rows i care about
 ```
 
+### reset the index again and create a subject variable
+```python
+dfs["Subject"] = dfs.index
+dfs.reset_index(inplace=True, drop=True)
+```
 
+### Sort dataframe for math later
+```python
+dfs.sort_values(by=["Subject","Time(s)"], inplace=True)
+```
 
