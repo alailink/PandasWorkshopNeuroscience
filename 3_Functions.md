@@ -1,4 +1,4 @@
-# Functions 
+# Functions and Loops
 
 ## Motivation
 
@@ -38,3 +38,11 @@ for i in range(len(list_of_pizzas)):
 ```
 in the first example, the english translation is, "For each file in my list of files, read file 1, then read file 2, ...".  
 in the second example, it might read, "for index value in my list of pizzas (and I found the length of the list), eat pizza index 1, then eat pizza index 2, etc...."
+
+## The Task
+Here is the task:
+* I need to read in all of my data files.
+* I probably want to use a function.
+
+Here are the problems:
+* I will need to concatenate all the files recursively, or declare it *a priori*.
