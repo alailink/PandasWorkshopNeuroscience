@@ -45,4 +45,37 @@ Here is the task:
 * I probably want to use a function.
 
 Here are the problems:
+* I need to generate a list of files to read in
+* Each file is unique, and I need to generate a unique identifier or declare it (and add to dataframe.)
 * I will need to concatenate all the files recursively, or declare it *a priori*.
+
+Things I will give you:
+```python
+from os import chdir, listdir
+file_list = listdir(folderofdata)
+```
+Honestly, super simple. If your data files are structured kindly, there are no more steps. If it's mixed up with non-data files, though, **you must filter this list**. 
+
+In your dataset, you can set an entire column to equal one number. Like "day", for example. This might be how you identify which file the data came from in your datframe.
+
+```python
+df["day"] = 1
+```
+
+Eventually, you'll need to concatenate two dataframes. 
+
+```python
+data = pd.concat([data1, data2], axis=0)
+#axis 0 indicates vertical. axis 1 is horizontal. I have never remembered this in my life.
+```
+Hint, this can be done recursively as each file comes in, and you add onto the existing larger dataframe each time.
+Another thing to notice is how data is passed into the concat function, as a list \[data1, data2....]. Theoretically, any number of dataframes can be passed into that list.
+
+Two ways to declare "day"
+you can either declare it yourself using some kind of iterative variable:
+```python
+i = 1
+loop:
+  i+=1
+```
+or you can somehow use the filename itself.
