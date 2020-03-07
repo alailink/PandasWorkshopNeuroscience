@@ -67,6 +67,7 @@ The cool part is that you have created a dataframe object. Yes, an object. And i
 df3.size()
 df3.columns
 df3.groupby()
+dfs.index.droplevel(level=0)
 ```  
 
-These will be used extensively throughout the workshop.
+This kind of structure will be used extensively throughout the workshop.
