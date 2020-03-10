@@ -9,3 +9,10 @@ For this workshop, download the dataset (not provided) and work through the tuto
 3. Functions (multi-file loading)
 4. Pandas data computations
 5. Statistics
+
+## Objectives
+* **Pandas**. Appreciate what it's good at and what other tools might be better
+* A conceptual understanding of functions and object-oriented programming
+* Work through some nitty-gritty of datasets.
+* How to use documentation and google to program independently and effectively.
+
