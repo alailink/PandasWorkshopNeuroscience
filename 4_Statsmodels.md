@@ -20,3 +20,11 @@
 
 ## Statsmodels  
 With that fun comparison of languages, let's begin our exploration of *statsmodels*, python's "R substitute". Let's look at the documentation:  
+https://www.statsmodels.org/stable/user-guide.html  
+Here we are presented with the user guide. The home page has some extended examples of usage.  
+
+Here is the task:
+* find a function to implement the welsh t-test, a common task in scientific analysis.
+
+Hints:
+! * the welsh t-test is a variation on the standard two-tailed t-test, but accounts for unequal variances.
