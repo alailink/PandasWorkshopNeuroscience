@@ -26,5 +26,5 @@ Here we are presented with the user guide. The home page has some extended examp
 Here is the task:
 * find a function to implement the welsh t-test, a common task in scientific analysis.
 
-Hints:
-! * the welsh t-test is a variation on the standard two-tailed t-test, but accounts for unequal variances.
+Hints:  
+! the welsh t-test is a variation on the standard two-tailed t-test, but accounts for unequal variances.
